@@ -1,0 +1,39 @@
+# Ignore Python bytecode files
+**/__pycache__
+**/*.pyc
+**/*.pyo
+
+# Ignore version control folders
+.git
+.gitignore
+
+# Ignore virtual environments
+env/
+venv/
+ENV/
+
+# Ignore distribution / packaging folders
+build/
+dist/
+.eggs/
+*.egg-info/
+*.whl
+
+# Ignore documentation builds
+docs/_build
+
+# Ignore Dockerfile and Docker-compose files (optional)
+Dockerfile
+docker-compose.yml
+
+# Ignore environment and secrets files
+
+
+# Ignore logs and coverage reports
+*.log
+*.coverage
+.coverage
+.pytest_cache/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints

@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,7 +29,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
-DEBUG = os.getenv('DEBUG')
+DEBUG = os.getenv('SECRET_KEY') == 'True'
 
 ALLOWED_HOSTS = ['*']
 
@@ -122,3 +125,4 @@ USE_TZ = True
 
 STATIC_ROOT = '/static/'
 STATIC_URL = '/static/'
+CSRF_TRUSTED_ORIGINS = ['http://localhost', 'http://127.0.0.1', 'https://yourdomain.com']
